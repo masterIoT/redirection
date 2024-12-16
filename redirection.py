@@ -1,11 +1,16 @@
 from flask import Flask, redirect, request
 import requests
+import socket 
 
 app = Flask(__name__)
 
+# Récupérer l'adresse IP de la machine
+hostname = socket.gethostname()  # Obtenir le nom d'hôte de la machine
+ip_address = socket.gethostbyname(hostname)  # Obtenir l'adresse IP associée au nom d'hôte
+
 # Adresse de l'application principale et du site de maintenance
-MAIN_APP_URL = "http://localhost:8080"
-MAINTENANCE_URL = "http://localhost:5002"
+MAIN_APP_URL = f"http://{ip_address}:8080"  # Utiliser l'adresse IP récupérée
+MAINTENANCE_URL = f"http://{ip_address}:5002"  # Utiliser l'adresse IP récupérée
 
 def is_main_app_available():
     """Teste si l'application principale est disponible."""
