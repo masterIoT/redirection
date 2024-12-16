@@ -17,7 +17,7 @@ WORKDIR /
 COPY . /
 
 # Installer les dépendances Python depuis requirements.txt
-RUN pip install flask requests
+RUN pip install flask requests socket
 
 # Exposer le port utilisé par le serveur
 EXPOSE 5003
