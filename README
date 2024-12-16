@@ -7,4 +7,4 @@ docker run -e HOST_IP=<adresse_ip> -p 80:80 ghcr.io/masteriot/redirection
 
 
 linux : 
-docker run --add-host=host.docker.internal:host-gateway -e HOST_IP=100.78.197.35 -p 80:80 ghcr.io/masteriot/redirection
+docker run --add-host=host.docker.internal:host-gateway -e HOST_IP=<adresse_ip> -p 80:80 ghcr.io/masteriot/redirection
