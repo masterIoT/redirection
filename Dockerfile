@@ -20,7 +20,7 @@ COPY . /
 RUN pip install flask requests
 
 # Exposer le port utilisé par le serveur
-EXPOSE 5003
+EXPOSE 80
 
 # Définir la commande de lancement
 CMD ["python", "redirection.py"]
