@@ -1,12 +1,12 @@
 from flask import Flask, redirect, request
 import requests
 import socket 
+import os
 
 app = Flask(__name__)
 
-# Récupérer l'adresse IP de la machine
-hostname = socket.gethostname()  # Obtenir le nom d'hôte de la machine
-ip_address = socket.gethostbyname(hostname)  # Obtenir l'adresse IP associée au nom d'hôte
+# Récupérer l'adresse IP de l'hôte depuis une variable d'environnement
+ip_address = os.getenv("HOST_IP", "127.0.0.1")
 
 # Adresse de l'application principale et du site de maintenance
 MAIN_APP_URL = f"http://{ip_address}:8080"  # Utiliser l'adresse IP récupérée
