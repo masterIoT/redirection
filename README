@@ -1,7 +1,7 @@
 to start run this commande line : 
 
 macOs et windows : 
-docker run -p 5003:5003 monitoring_v2
+docker run -p 5003:5003 redirection
 
 linux : 
-docker run --add-host=host.docker.internal:host-gateway -p 5003:5003 monitoring_v2
+docker run --add-host=host.docker.internal:host-gateway -p 5003:5003 redirection
