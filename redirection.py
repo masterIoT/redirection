@@ -4,8 +4,8 @@ import requests
 app = Flask(__name__)
 
 # Adresse de l'application principale et du site de maintenance
-MAIN_APP_URL = "http://host.docker.internal:8080"
-MAINTENANCE_URL = "http://host.docker.internal:5002"
+MAIN_APP_URL = "http://localhost:8080"
+MAINTENANCE_URL = "http://localhost:5002"
 
 def is_main_app_available():
     """Teste si l'application principale est disponible."""
