@@ -1,7 +1,7 @@
 to start run this commande line : 
 
 macOs et windows : 
-docker run -p 5003:5003 redirection
+docker run -p 5003:5003 ghcr.io/masteriot/redirection
 
 linux : 
-docker run --add-host=host.docker.internal:host-gateway -p 5003:5003 redirection
+docker run --add-host=host.docker.internal:host-gateway -p 5003:5003 ghcr.io/masteriot/redirection
